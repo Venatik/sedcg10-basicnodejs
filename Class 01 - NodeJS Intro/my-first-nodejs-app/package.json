@@ -9,5 +9,9 @@
     "start-dev": "node app.js"
   },
   "author": "Venatik",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "colors": "^1.4.0"
+  }
 }

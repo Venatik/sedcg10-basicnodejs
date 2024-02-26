@@ -1,3 +1,5 @@
+let colors = require("colors");
+
 // global.console.log("This console.log comes from the index.js file"); // Same as console.log but with global. prefix
 
 console.log("This console.log comes from the index.js file");
@@ -19,8 +21,10 @@ console.log(process.cwd()); // current working directory
 //     process.exit();
 // });
 
-console.log("START");
+console.log("START"); // first
 setTimeout(() => {
-    console.log("This message is inside setTimeout. It is printed after 1 second.");
-}, 1000);
-console.log("END");
+    console.log("This message is inside setTimeout. It is printed after 1 second.".blue); // third
+}, 0);
+console.log("END"); // second
+
+console.log("Hello, I'm GREEN and BOLD".green);
