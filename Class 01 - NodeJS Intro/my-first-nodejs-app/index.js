@@ -23,8 +23,8 @@ console.log(process.cwd()); // current working directory
 
 console.log("START"); // first
 setTimeout(() => {
-    console.log("This message is inside setTimeout. It is printed after 1 second.".blue); // third
-}, 0);
+    console.log("This message is inside setTimeout. It is printed after 50ms.".blue); // third
+}, 50);
 console.log("END"); // second
 
-console.log("Hello, I'm GREEN and BOLD".green);
+console.log("Hello, I'm GREEN".green);
