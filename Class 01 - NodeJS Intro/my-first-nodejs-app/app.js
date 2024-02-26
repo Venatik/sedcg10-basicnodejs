@@ -1,0 +1,1 @@
+console.log("This console.log comes from the app.js file!");
