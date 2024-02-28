@@ -1,0 +1,2 @@
+Hello, this text will be written to the file specified in the fileName once the code is executed.
+This text will be appended to the file specified in the fileName once the code is executed.
