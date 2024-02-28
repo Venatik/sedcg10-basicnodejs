@@ -66,10 +66,10 @@ fileSystem.readFile(fileName, "utf8", function (err, data) {
 // fileSystem.readFileSync(fileName, "utf8"); // read the content of the file with the specified name synchronously
 
 // ======== Creating a directory ========
-fileSystem.mkdir("./TestFolder", 700, (err) => { // Can also use an absolute path
+/* fileSystem.mkdir("./TestFolder", 700, (err) => { // Can also use an absolute path
     if (err) {
         console.log("Error while creating directory", err);
     } else
         console.log("Directory created successfully.");
-}); // create a directory with the specified name
+}); */ // create a directory with the specified name
 
