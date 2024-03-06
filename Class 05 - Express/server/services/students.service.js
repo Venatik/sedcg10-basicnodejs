@@ -95,4 +95,4 @@ export {
     getStudentById,
     updateStudent,
     deleteStudent
-}
+};
