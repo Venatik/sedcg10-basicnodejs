@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import exp from 'constants';
+import { router as studentsRouter } from './routes/students.routes.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,8 +14,9 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get("/home", (req, res) => {
-    res.send("Hello from Express!");
+app.get("/", (req, res) => {
+    // res.send("Hello from Express!");
+    res.json({ message: "Hello from Express!" });
 });
 
 const currentFileUrl = import.meta.url;
@@ -24,6 +26,7 @@ const projectPath = path.dirname(currentFilePath);
 const staticHomePagePath = path.join(projectPath, "homePage");
 const staticAboutPagePath = path.join(projectPath, "aboutPage");
 
+app.use("/api", studentsRouter); // localhost:3000/api/
 app.use("/home", express.static(staticHomePagePath));
 app.use("/about", express.static(staticAboutPagePath));
 
