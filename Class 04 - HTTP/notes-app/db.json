@@ -1,22 +1,5 @@
-[
-  {
-    "id": 1,
-    "title": "Meeting Notes",
-    "content": "Discuss project updates and upcoming deadlines."
-  },
-  {
-    "id": 2,
-    "title": "Shopping List",
-    "content": "Milk, eggs, bread, vegetables, and fruits."
-  },
-  {
-    "id": 3,
-    "title": "Ideas for Blog",
-    "content": "Brainstorm topics and outline key points."
-  },
-  {
-    "id": 4,
-    "title": "Exercise Routine",
-    "content": "60 minutes of jogging, 40 minutes of strength training."
-  }
-]
+{
+  "title": "Learn Coding",
+  "content": "3 hours daily.",
+  "id": "876a49a4-ae06-4dd9-9c58-4155415def52"
+}
