@@ -126,7 +126,7 @@ import loggerEmitter from "./loggerService.js";
 import { writeData, readData } from "./fileService.js";
 
 const host = "http://localhost";
-const port = 3000;
+const port = 3002;
 
 const server = http.createServer((request, response) => {
     const url = request.url;
@@ -202,11 +202,10 @@ const server = http.createServer((request, response) => {
     // ---------------------------------------------------------------------------
     if (method === "PUT") {
         response.setHeader("Content-Type", "text/json");
-        const urlArray = url.split("/"); // localhost:3002/id
-        const id = urlArray.length[urlArray.length - 1];
+        const urlArray = url.split("/");
+        const id = urlArray[urlArray.length - 1];
 
         let body = [];
-
         request.on("data", (chunk) => {
             body.push(chunk);
         });
@@ -217,15 +216,18 @@ const server = http.createServer((request, response) => {
 
             const dbData = readData("db.json");
             const notes = JSON.parse(dbData);
-            const index = notes.findIndex((note) => note.id == id);
+            const index = notes.findIndex((note) => note.id === id);
             notes[index] = {
                 ...parsedBody,
                 id,
             };
 
-            loggerEmitter.emit(`log', 'The user updated the note with id ${id}`);
+            loggerEmitter.emit(
+                "log",
+                `The user updated note with title: ${notes[index].title}`
+            );
 
-            const stringifiedNotes = JSON.stringify(notes, null);
+            const stringifiedNotes = JSON.stringify(notes, null, 2);
             writeData("db.json", stringifiedNotes);
         });
 
@@ -255,5 +257,6 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+    console.log(`Srever listening on port ${port}`);
 });
+
