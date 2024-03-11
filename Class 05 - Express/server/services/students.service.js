@@ -82,7 +82,7 @@ const deleteStudent = (studentId) => {
 
     const updatedStudentsData = students.filter(student => student.id !== studentId);
 
-    if (!updatedStudents) {
+    if (!updatedStudentsData) {
         throw new Error("Student not found.");
     };
 
