@@ -16,6 +16,10 @@ export const getUsers = (queryData) => {
     let parsedUsers = JSON.parse(users);
     let validRoles = ["admin", "standard"];
 
+    if (!validRoles.includes(queryData?.role)) {
+        throw new Error("Invalid role.");
+    };
+
     if (queryData?.role && validRoles.includes(queryData.role)) {
         let filteredUsers = parsedUsers.filter((user) => user.role === queryData.role);
         return filteredUsers;
