@@ -2,6 +2,9 @@ import DataService from "../services/data.service.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
+// The model is the only one that is allowed to "talk" to the DataBase
+// It is responsible for reading and writing data to the database by using the helper DataService
+
 const currentFileUrl = import.meta.url;
 const currentFilePath = fileURLToPath(currentFileUrl); // /e/SEDC/repos/sedcg10-basicnodejs/Class 07 - MVC/products-app/models/product.model.js
 const projectPath = path.dirname(currentFilePath); // /e/SEDC/repos/sedcg10-basicnodejs/Class 07 - MVC/products-app/models
