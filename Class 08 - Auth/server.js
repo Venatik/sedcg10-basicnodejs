@@ -21,4 +21,3 @@ app.use(productRouter);
 app.listen(PORT, HOST, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
-

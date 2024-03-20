@@ -3,7 +3,7 @@ const validateAuthSession = (req, res, next) => {
         console.log(req.session);
         next();
     } else {
-        res.status(403).send({ message: "Forbidden." });
+        res.status(403).send({ message: "You need to login first." });
     }
 }
 
