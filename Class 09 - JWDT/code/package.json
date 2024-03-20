@@ -1,0 +1,24 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "joi": "17.12.2",
+    "uuid": "9.0.1",
+    "dotenv": "^10.0.0"
+  }
+}
